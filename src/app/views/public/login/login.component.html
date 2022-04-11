@@ -1,0 +1,142 @@
+<div class="col-sm-12" style="text-align: -webkit-center;align-self: center;padding: 0px;">
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center">
+        <div class="auth-box on-sidebar with-sidebar sidebar-personal">
+            <div class="card normal-shadow" style="border-radius: 29px;">
+                <div *ngIf="awaitAnimation == true" class="row full-width loading-animation no-margin">
+                    <div class="col-12 full-centered">
+                        <div class="loader-label">Loading...</div>
+                        <i class="fas fa-sign-in-alt loader-icon"></i>
+                        <h2 *ngIf="!recoverform" style="position: absolute;bottom: 18%;">Iniciando</h2>
+                        <h2 *ngIf="recoverform" style="position: absolute;bottom: 18%;">Recuperando</h2>
+                    </div>
+                </div>
+                <div class="card-body max-w-500" style="padding: 40px;">
+                    <div id="loginform" [class]="{'d-none': recoverform}" >
+                        <div class="logo">
+                            <a class="db" routerLink="/">
+                                <img src="/assets/images/logos/logo_im_300x300.png" alt="logo" style="height: 100px;" />
+                            </a>
+                            <h1 class="font-medium m-b-20">Iniciar Sesión</h1>
+                            <!-- <h4 ><a routerLink="/register" class="text-dark text-grey">Registrarme</a></h4> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form id="myForm" class="form-horizontal m-t-20" id="loginform"
+                                    [formGroup]="newSessionDataForm">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                              <i class="fa-solid fa-user"></i>
+                                            </span>
+                                        </div>
+
+                                        <input autocomplete="off" type="email" matInput
+                                            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,3}" class="form-control"
+                                            id="email" name="email" placeholder="Correo" required formControlName="email">
+
+                                        <div *ngIf="email.invalid && email.touched"
+                                            class="validation-label alert alert-danger no-margin">
+                                            <div *ngIf="email.errors?.['required']">
+                                                Correo electrónico requerido.
+                                            </div>
+                                            <div *ngIf="email.invalid">
+                                                Correo electrónico invalido.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon2">
+                                              <i class="fa-solid fa-key"></i>
+                                            </span>
+                                        </div>
+                                        <input autocomplete="off" type="password" class="form-control" id="password" name="password"
+                                            placeholder="Contraseña" required formControlName="password">
+
+                                        <div *ngIf="password.invalid && password.touched"
+                                            class="validation-label alert alert-danger no-margin">
+                                            <div *ngIf="password.errors?.['required']">
+                                                Contraseña requerida.
+                                            </div>
+                                            <div *ngIf="password.errors?.['minlength']">
+                                                La contraseña debe contener por lo menos 8 caracteres.
+                                            </div>
+                                            <div *ngIf="password.errors?.['forbiddenName']">
+                                                La contraseña cannot be Bob.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="custom-control custom-checkbox">
+                                                <a (click)="showRecoverForm()" href="javascript:void(0)" id="to-recover" class="text-dark float-right">
+                                                    <i class="fa fa-lock m-r-5"></i>
+                                                    ¿Olvidaste tu Contraseña?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <div class="col-xs-12 p-b-20">
+                                            <!-- <button routerLink="/dashboard/admin/home" class="btn btn-block btn-lg btn-info" type="submit">Iniciar Sesión</button> -->
+                                            <button
+                                                [disabled]="newSessionDataForm.invalid"
+                                            (click)="loginUser()" class="btn btn-block btn-lg btn-success color-white max-btn-animate normal-shadow" type="submit">Iniciar Sesión</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recoverform" [class]="{'d-block': recoverform}">
+                        <div class="logo">
+                            <span class="db">
+                                <img src="/assets/images/logos/logo_im_300x300.png" alt="logo" style="height: 100px;" />
+                            </span>
+                            <h5 class="font-medium m-b-20">Recuperar contraseña</h5>
+                            <span>Se enviaran las instrucciones para recuperar tu contraseña serán enviadas a tu email!</span>
+                        </div>
+                        <div class="row m-t-20">
+                            <form class="col-12">
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon2"><i class="ti-email"></i></span>
+                                            </div>
+                                            <input
+                                                required
+                                                [(ngModel)]="recoverEmail"
+                                                (focusout)="onFocusOutFormRecoverEmail($event)"
+                                                [ngModelOptions]="{standalone: true}"
+                                                class="form-control form-control-lg" type="email" required placeholder="Correo Electrónico">
+                                            <label *ngIf="!validEmail" class="validation-label">
+                                                * Correo invalido.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-6">
+                                        <button
+                                            [disabled]='!re.test(recoverEmail.toLowerCase() )'
+                                            (click)="test()"
+                                            class="btn btn-block btn-lg btn-success color-white max-btn-animate normal-shadow" type="submit" name="action">Recuperar</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button (click)="showRecoverForm()" class="btn btn-block btn-lg btn-danger max-btn-animate normal-shadow" type="submit" name="action">Cancelar</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="image-background image-col full-centered">
+            <img class="image-cuu" src="/assets/images/logos/hecho_en_chihuahua2-300x107.png">
+        </div>
+    </div>
+</div>

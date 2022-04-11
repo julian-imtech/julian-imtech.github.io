@@ -1,0 +1,23 @@
+
+.preregister-box{
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 576px){
+    .preregister-box{
+        margin-bottom: 0px !important;
+    }
+}
+@media screen and (max-width: 992px){
+    .preregister-box{
+        /* margin-bottom: 720px; */
+        margin-bottom: 0px;
+    }
+}
+.topbar {
+  position: relative;
+  z-index: 50;
+  transition: 0.2s ease-in;
+  background: #fff;
+  height: 110px;
+}

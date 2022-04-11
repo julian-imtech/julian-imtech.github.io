@@ -1,0 +1,34 @@
+.size-padding{
+  padding: 0px 11%;
+}
+h1{
+  padding-top: 30px;
+  font-size: 5em;
+  font-weight: 700;
+}
+label{
+  font-size: 2em;
+  color: #000000;
+  line-height: 30px !important;
+  overflow-wrap: break-word;
+  width: 100%;
+}
+.col-2 , .col-10{
+  padding: 15px;
+}
+a{
+  color: #000000;
+}
+a:hover{
+  color: #2b832f;
+  label{
+    color: #2b832f;
+  }
+}
+
+.map-container {
+  width: 100%;
+  height: 80em;
+  border-radius: 100px;
+  /* position: absolute; */
+}
