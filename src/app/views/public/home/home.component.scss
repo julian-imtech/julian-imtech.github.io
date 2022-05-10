@@ -1,3 +1,9 @@
+
+.mission-vision-component {
+  text-align: left;
+  // width: 37.5%;
+}
+
 .gawi-logo{
   height: 50px;
 }
@@ -81,7 +87,7 @@
   }
 
 }
-.row-us-services{
+.row-us-services {
   height: 140px;
   background: #A2C905;
   /* position: relative;
@@ -152,14 +158,13 @@
   }
 }
 
-
-
 .row-us-services-detail{
   background: #ffffff;
   cursor: pointer;
+  padding-top: 8px;
 
   .col-3,.col-4{
-    padding: 2px 2px;
+    padding: 8px 8px;
     cursor: pointer;
     button{
       background: #a2c907;
@@ -317,3 +322,4 @@
     align-items: end !important;
   }
 }
+

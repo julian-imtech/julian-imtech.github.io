@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     freeDrag : true,
     dots: false,
     startPosition : 1,
-    margin : 35,
+    // margin : 35,
     /* responsiveRefreshRate : 15, */
     navSpeed: 700,
     navText: ['', ''],
