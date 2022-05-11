@@ -1,5 +1,5 @@
 import { UtilitiesService } from './../../../services/utilities/utilities.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { SEOService } from './../../../services/seo/seo.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     freeDrag : true,
     dots: false,
     startPosition : 1,
-    // margin : 35,
+    margin: 35,
     /* responsiveRefreshRate : 15, */
     navSpeed: 700,
     navText: ['', ''],
@@ -51,10 +51,14 @@ export class HomeComponent implements OnInit {
     this.SEOService.updateMeta(()=>{});
   }
 
+  @HostListener('window:resize', ['$event'])
   async ngOnInit() {
-    let p : HTMLElement | null = document.getElementById("description-div");
 
-    if(p){
+    this.initialWidthDescription = -1;
+    let p: HTMLElement | null = document.getElementById("description-div");
+
+    if(p) {
+      console.log("OFFSET:", p.offsetWidth)
       await this.utilitiesService.sleep(100);
       this.initialWidthDescription = p.offsetWidth;
     }
