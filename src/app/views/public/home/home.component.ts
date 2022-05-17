@@ -53,21 +53,20 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   async ngOnInit() {
-
     this.initialWidthDescription = -1;
     let p: HTMLElement | null = document.getElementById("description-div");
 
     if(p) {
-      console.log("OFFSET:", p.offsetWidth)
+      console.log("P:", p.offsetWidth);
       await this.utilitiesService.sleep(100);
       this.initialWidthDescription = p.offsetWidth;
     }
   }
 
   changeUsData( index : number ){
-    if(index == this.actualDescription){
+    if (index == this.actualDescription) {
       this.actualDescription = -1;
-    }else{
+    } else {
       this.actualDescription = index;
     }
   }

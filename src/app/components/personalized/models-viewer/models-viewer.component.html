@@ -6,7 +6,7 @@
         [wrap]="true" class="full-height">
         <ng-template *ngFor="let model of filesDataConfig; let i = index;" ngbSlide [id]="''+i"
           class="col-12 full-height full-centered">
-          <model-viewer style="height: 364px;" class="full-width" camera-controls
+          <model-viewer style="height: 300px;" class="full-width" camera-controls
             [attr.camera-orbit]="model.camera_orbit" [attr.src]="model.src" alt="A 3D model of an astronaut"
             data-js-focus-visible="" ar-status="not-presenting">
           </model-viewer>
