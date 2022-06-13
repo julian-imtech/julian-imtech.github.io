@@ -4,13 +4,10 @@
 <div class="row">
   <div class="main-banner-col-A">
     <div class="row">
-      <div id="col-A-banner-position" class="col-2 full-right full-centered">
+      <div id="col-A-banner-position " class="col-2 full-right full-centered">
         <label class="no-margin vertical-description full-centered">
           Explora nuestros productos
-          <img
-            class="lateral-bar"
-            src="/assets/images/pages/landing/barra.png"
-          />
+          <img class="lateral-bar" src="/assets/images/pages/landing/barra.png" />
         </label>
       </div>
     </div>
@@ -18,17 +15,10 @@
   <div class="main-banner-col-B">
     <div class="row">
       <div class="col-12" style="padding: 10px;">
-        <img
-          class="gawi-logo"
-          src="/assets/images/pages/landing/gawi_logo.png"
-        />
+        <img class="gawi-logo" src="/assets/images/pages/landing/gawi_logo.png" />
       </div>
       <div class="col-12">
-        <label
-          id="col-B-D-title"
-          class="pa-t-10 ff-roboto card-title black-color"
-          style=""
-        >
+        <label id="col-B-D-title" class="pa-t-10 ff-roboto card-title black-color">
           Medidor de agua
         </label>
       </div>
@@ -41,7 +31,7 @@
     </div>
   </div>
   <div class="main-banner-col-C">
-    <div class="row" style="padding: 10px;">
+    <div class="row">
       <app-models-viewer class="full-height"></app-models-viewer>
     </div>
   </div>
@@ -54,7 +44,7 @@
       </div>
 
       <div id="col-D-select-square" class="pa-10">
-        <div class="row">
+        <div class="row no-display-600">
           <div class="col-4 full-centered">
             <div class="image-icon full-centered">
               <img src="/assets/images/pages/landing/micro.png" />
@@ -62,35 +52,26 @@
           </div>
           <div class="col-4 full-centered">
             <div class="image-icon full-centered">
-              <img
-                class="fire-image"
-                src="/assets/images/pages/landing/fire.png"
-              />
+              <img class="fire-image" src="/assets/images/pages/landing/fire.png" />
             </div>
           </div>
           <div class="col-4 full-centered">
-            <img
-              class="aqua-icon"
-              src="/assets/images/pages/landing/agua.png"
-            />
+            <img class="aqua-icon" src="/assets/images/pages/landing/agua.png" />
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-4 full-centered pa-5">
+        <div class="row pa-t-10">
+          <div class="col-4 full-centered no-padding">
             <div class="col-square full-centered">
               <img src="/assets/images/pages/landing/micro-btn.png" />
             </div>
           </div>
-          <div class="col-4 full-centered pa-5">
+          <div class="col-4 full-centered no-padding">
             <div class="col-square full-centered">
-              <img
-                class="gas-image"
-                src="/assets/images/pages/landing/meter_gas_btn.png"
-              />
+              <img class="gas-image" src="/assets/images/pages/landing/meter_gas_btn.png" />
             </div>
           </div>
-          <div class="col-4 full-right pa-5">
+          <div class="col-4 full-right no-padding">
             <div class="col-square full-centered">
               <img src="/assets/images/pages/landing/meter_water_btn.png" />
             </div>
@@ -100,7 +81,7 @@
     </div>
   </div>
 
-<!--
+  <!--
   -- sobre nosotros
   -->
   <div class="about-us-base">
@@ -114,26 +95,21 @@
     </div>
   </div>
 
-<!--
+  <!--
   -- misión, visión e historia
   -->
-  <div>
+  <div class="history-us-component">
     <div class="row full-width no-margin">
-      <div
-        [class]="
+      <div [class]="
           actualDescription == 0
             ? 'description-col-size'
             : 'description-col-size closed'
-        "
-        (click)="changeUsData(0)"
-      >
-        <div
-          [style.width]="
+        " (click)="changeUsData(0)">
+        <div [style.width]="
             initialWidthDescription == -1
               ? '100%'
               : initialWidthDescription + 'px'
-          "
-        >
+          ">
           <h2 class="ff-roboto">
             Historia
           </h2>
@@ -152,21 +128,16 @@
         </div>
       </div>
 
-      <div
-        [class]="
+      <div [class]="
           actualDescription == 1
             ? 'description-col-size'
             : 'description-col-size closed'
-        "
-        (click)="changeUsData(1)"
-      >
-        <div
-          [style.width]="
+        " (click)="changeUsData(1)">
+        <div [style.width]="
             initialWidthDescription == -1
               ? '100%'
               : initialWidthDescription + 'px'
-          "
-        >
+          ">
           <h2 class="ff-roboto">
             Misión
           </h2>
@@ -184,21 +155,16 @@
         </div>
       </div>
 
-      <div
-        [class]="
+      <div [class]="
           actualDescription == 2
             ? 'description-col-size'
             : 'description-col-size closed'
-        "
-        (click)="changeUsData(2)"
-      >
-        <div
-          [style.width]="
+        " (click)="changeUsData(2)">
+        <div [style.width]="
             initialWidthDescription == -1
               ? '100%'
               : initialWidthDescription + 'px'
-          "
-        >
+          ">
           <h2 class="ff-roboto">
             Visión
           </h2>
@@ -218,21 +184,16 @@
         </div>
       </div>
 
-      <div
-        [class]="
+      <div [class]="
           actualDescription == -1
             ? 'description-col-size'
             : 'description-col-size closed'
-        "
-      >
-        <div
-          [style.width]="
+        ">
+        <div [style.width]="
             initialWidthDescription == -1
               ? '100%'
               : initialWidthDescription + 'px'
-          "
-          id="description-div"
-        >
+          " id="description-div">
           <h2 class="ff-roboto">
             ¿Que somos y que hacemos?
           </h2>
@@ -247,34 +208,31 @@
     </div>
   </div>
 
-<!--
+  <!--
   -- nuestros servicios
   -->
-  <div class="our-services-base">
-    <div class="about-us-banner-margin our-services-banner">
+  <div class="our-services-base full-centered">
+    <div class="about-us-banner-margin our-services-banner full-centered">
       <div class="row">
         <h1>Nuestros servicios</h1>
       </div>
     </div>
     <div class="about-us-wires our-services-figure">
-      <img
-        class=""
-        src="/assets/images/pages/landing/bg_us_services_layer.svg"
-      />
+      <img class="" src="/assets/images/pages/landing/bg_us_services_layer.svg" />
     </div>
   </div>
 
-<!--
+  <!--
   -- panel de servicios
   -->
-  <div class="row full-centered row-us-services-detail">
+  <div class="row full-centered row-us-services-detail no-margin">
     <!-- <div class="max-container no-padding"> -->
     <div class="col-12">
       <div class="row">
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/concept.svg" />
               </div>
               <div class="col-12 full-centered">
@@ -294,16 +252,14 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/merca.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Mercadotecnia y <br />análisis de negocios</label
-                >
+                <label class="white-color md-text">Mercadotecnia y <br />análisis de negocios</label>
               </div>
             </div>
 
@@ -319,16 +275,14 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/micro.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Diseño<br />electrónico</label
-                >
+                <label class="white-color md-text">Diseño<br />electrónico</label>
               </div>
             </div>
 
@@ -344,16 +298,14 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/conf.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Diseño mecánico <br />e industrial</label
-                >
+                <label class="white-color md-text">Diseño mecánico <br />e industrial</label>
               </div>
             </div>
 
@@ -370,17 +322,15 @@
           </button>
         </div>
         <!--  -->
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/dis.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Diseño de software<br />
-                  y firmware</label
-                >
+                <label class="white-color md-text">Diseño de software<br />
+                  y firmware</label>
               </div>
             </div>
 
@@ -396,10 +346,10 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/prot.svg" />
               </div>
               <div class="col-12 full-centered">
@@ -419,17 +369,15 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/merca2.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Prueba de<br />
-                  mercado</label
-                >
+                <label class="white-color md-text">Prueba de<br />
+                  mercado</label>
               </div>
             </div>
 
@@ -445,19 +393,15 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
-                <img
-                  src="/assets/images/pages/landing/services/suministros.svg"
-                />
+              <div class="col-12 full-centered resp-btn">
+                <img src="/assets/images/pages/landing/services/suministros.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Cadena de<br />
-                  suministros</label
-                >
+                <label class="white-color md-text">Cadena de<br />
+                  suministros</label>
               </div>
             </div>
 
@@ -473,17 +417,15 @@
           </button>
         </div>
         <!--  -->
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/test.svg" />
               </div>
               <div class="col-12 full-centered">
-                <label class="white-color md-text"
-                  >Equipos de<br />
-                  prueba</label
-                >
+                <label class="white-color md-text">Equipos de<br />
+                  prueba</label>
               </div>
             </div>
 
@@ -497,10 +439,10 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/cert.svg" />
               </div>
               <div class="col-12 full-centered">
@@ -518,10 +460,10 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/herr.svg" />
               </div>
               <div class="col-12 full-centered">
@@ -541,10 +483,10 @@
             </div>
           </button>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-6 col-lg-3 col-md-4">
           <button class="full-width full-centered">
             <div class="row hide-title">
-              <div class="col-12 full-centered">
+              <div class="col-12 full-centered resp-btn">
                 <img src="/assets/images/pages/landing/services/rev.svg" />
               </div>
               <div class="col-12 full-centered">
@@ -569,7 +511,91 @@
     <!-- </div> -->
   </div>
 
-<!--
+  <div class="about-us-base-mobile">
+    <div class="about-us-banner-margin about-us-banner-mobile bg-us no-padding">
+      <div class="row">
+        <h1 class="pa-20">¿Que somos y que hacemos?</h1>
+        <p class="pa-10" style="text-align: justify;padding: 10px 30px 20px 30px;">
+          En IMTECH Desarrollos nos dedicamos al desarrollo de producto.
+          Trabajamos en todas las etapas del proceso de desarrollo, desde la
+          idea hasta la fabricación de prototipos, rondas piloto y producción,
+          abarcando diversas áreas según la necesidad de tu producto.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row no-margin">
+    <div class="col-12 no-padding">
+      <div class="row card-us-details">
+        <div class="col-4 no-padding">
+          <div class="images-col-size">
+            <div class="full-width full-height full-centered gradient-overlay">
+              <label class="ff-roboto">Misión</label>
+              <img src="/assets/images/pages/landing/water_meter_description.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-8 no-padding">
+          <div class="description-col-size">
+            <div [style.width]="'100%'">
+              <p class="mission-vision-component ff-roboto full-left pa-10">
+                Brindar soluciones en diseño electrónico al convertir una idea en un
+                producto innovador, a través de ofrecer el ciclo completo desde el
+                diseño y desarrollo hasta la producción y actualización constante.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row card-us-details">
+        <div class="col-4 no-padding">
+          <div class="images-col-size">
+            <div class="full-width full-height full-centered gradient-overlay">
+              <label class="ff-roboto">Visión</label>
+              <img src="/assets/images/pages/landing/loger_description.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-8 no-padding">
+          <div class="description-col-size">
+            <div [style.width]="'100%'">
+              <p class="mission-vision-component ff-roboto full-left pa-10">
+                Somos reconocidos por nuestros clientes nacionales e internacionales
+                como una empresa consolidada en el desarrollo de productos
+                electrónicos innovadores con capacidades de diseño y manufactura;
+                fundamentados en procesos estandarizados, personal capacitado y
+                rentabilidad superior al promedio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row card-us-details">
+        <div class="col-4 no-padding">
+          <div class="images-col-size">
+            <div class="full-width full-height full-centered gradient-overlay">
+              <label class="ff-roboto">Visión</label>
+              <img src="/assets/images/pages/landing/gas_meter_description.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-8 no-padding">
+          <div class="description-col-size">
+            <div [style.width]="'100%'">
+              <p class="mission-vision-component ff-roboto full-left pa-10">
+                En IMTECH Desarrollos nos dedicamos al desarrollo de producto.
+                Trabajamos en todas las etapas del proceso de desarrollo, desde la
+                idea hasta la fabricación de prototipos, rondas piloto y producción,
+                abarcando diversas áreas según la necesidad de tu producto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
   -- casos de éxito
   -->
   <div class="row full-centered">
@@ -590,9 +616,7 @@
                 <div class="col-lg-4 col-md-6 full-centered bottom-align">
                   <div class="row">
                     <div class="col-12 full-centered">
-                      <img
-                        src="/assets/images/pages/landing/cases/azteca.png"
-                      />
+                      <img src="/assets/images/pages/landing/cases/azteca.png" />
                     </div>
                     <div class="col-12 full-centered title-product">
                       Medidor Azteca
@@ -622,9 +646,7 @@
                 <div class="col-lg-4 col-md-6 full-centered bottom-align">
                   <div class="row">
                     <div class="col-12 full-centered">
-                      <img
-                        src="/assets/images/pages/landing/cases/modulos.png"
-                      />
+                      <img src="/assets/images/pages/landing/cases/modulos.png" />
                     </div>
                     <div class="col-12 full-centered title-product">
                       Modulos IM
@@ -641,9 +663,7 @@
                 <div class="col-lg-4 col-md-6 full-centered bottom-align">
                   <div class="row">
                     <div class="col-12 full-centered">
-                      <img
-                        src="/assets/images/pages/landing/cases/gas_sombra.png"
-                      />
+                      <img src="/assets/images/pages/landing/cases/gas_sombra.png" />
                     </div>
                     <div class="col-12 full-centered title-product">
                       Medidor de gas
@@ -658,10 +678,7 @@
                 <div class="col-lg-4 col-md-6 full-centered bottom-align">
                   <div class="row">
                     <div class="col-12 full-centered">
-                      <img
-                        class="water-meter-img"
-                        src="/assets/images/pages/landing/cases/meter_water.png"
-                      />
+                      <img class="water-meter-img" src="/assets/images/pages/landing/cases/meter_water.png" />
                     </div>
                     <div class="col-12 full-centered title-product">
                       Medidor ultrasonico
@@ -676,10 +693,7 @@
                 <div class="col-lg-4 col-md-6 full-centered bottom-align">
                   <div class="row">
                     <div class="col-12 full-centered">
-                      <img
-                        class="water-meter-img"
-                        src="/assets/images/pages/landing/cases/eficacy.png"
-                      />
+                      <img class="water-meter-img" src="/assets/images/pages/landing/cases/eficacy.png" />
                     </div>
                     <div class="col-12 full-centered title-product">
                       Medidor de eficiencia
@@ -701,70 +715,46 @@
     </div>
   </div>
 
-<!--
+  <!--
   -- nuestros clientes
   -->
   <div class="row full-centered">
-    <div class="col-12 full-left pa-t-30 pa-b-20" style="padding-left: 5%;">
+    <div class="col-12 full-left pa-t-30 pa-b-20 col-us-clients" style="padding-left: 5%;">
       <label class="ff-roboto us-label black-color">
         Nuestros clientes
       </label>
     </div>
   </div>
   <div class="row row-us-clients">
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/ADM.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/ADM.png" />
     </div>
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/asteca.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/asteca.png" />
     </div>
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/electro_full.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/electro_full.png" />
     </div>
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/foxconn.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/foxconn.png" />
     </div>
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/GCC.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/GCC.png" />
     </div>
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/jabil.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/jabil.png" />
     </div>
-    <div class="col full-centered">
-      <img
-        class="bg-image-layer"
-        src="/assets/images/pages/landing/clients/motherson.png"
-      />
+    <div class="col-4 col-sm full-centered">
+      <img class="bg-image-layer" src="/assets/images/pages/landing/clients/motherson.png" />
     </div>
   </div>
 
-<!--
+  <!--
   -- tarjetas de noticias e innovación
   -->
 
-  <div class="row full-centered row-innovation pa-b-70">
-    <div
-      class="col-12 ff-roboto pa-t-60 white-color us-label"
-      style="padding-left: 6%;"
-    >
+  <div class="row full-centered row-innovation no-margin no-padding" style="padding-bottom: 70px !important;">
+    <div class="col-12 ff-roboto pa-t-60 white-color inovation-label" style="padding-left: 6%;">
       Innovación
     </div>
     <div class="col-12 pa-t-10">

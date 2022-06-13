@@ -1,51 +1,103 @@
-<div class="navbar-register normal-border" >
-    <div class="max-navbar">
-      <div class="row full-centered full-width" style="height: inherit;">
-        <div class="col-4">
-          <div class="row">
-            <div class="col-5 full-centered">
-              <a routerLink="/">
-                <img *ngIf="!isTransparent" class="logo-nav-bar" src="/assets/images/logos/logohd_simplificado.png">
-                <img *ngIf="isTransparent" class="logo-nav-bar" src="/assets/images/logos/logohd_simplificado_blanco.png">
-              </a>
-            </div>
-            <div class="col-7 full-centered">
-              <img *ngIf="isTransparent" class="logo-nav-bar blue-points" src="/assets/images/pages/landing/white_squares.svg">
-              <img *ngIf="isTransparent" class="logo-nav-bar pa-l-4 blue-points" src="/assets/images/pages/landing/white_squares.svg">
-              <img *ngIf="!isTransparent" class="logo-nav-bar blue-points" src="/assets/images/pages/landing/squares.svg">
-              <img *ngIf="!isTransparent" class="logo-nav-bar pa-l-4 blue-points" src="/assets/images/pages/landing/squares.svg">
-            </div>
+<div class="navbar-register normal-border">
+  <div class="max-navbar">
+    <div class="row full-centered full-width" style="height: inherit;">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-5 full-centered">
+            <a routerLink="/">
+              <img *ngIf="!isTransparent" class="logo-nav-bar" src="/assets/images/logos/logohd_simplificado.png">
+              <img *ngIf="isTransparent" class="logo-nav-bar" src="/assets/images/logos/logohd_simplificado_blanco.png">
+            </a>
+          </div>
+          <div class="col-7 full-centered blue-points-show">
+            <img *ngIf="isTransparent" class="logo-nav-bar blue-points"
+              src="/assets/images/pages/landing/white_squares.svg">
+            <img *ngIf="isTransparent" class="logo-nav-bar pa-l-4 blue-points"
+              src="/assets/images/pages/landing/white_squares.svg">
+            <img *ngIf="!isTransparent" class="logo-nav-bar blue-points" src="/assets/images/pages/landing/squares.svg">
+            <img *ngIf="!isTransparent" class="logo-nav-bar pa-l-4 blue-points"
+              src="/assets/images/pages/landing/squares.svg">
           </div>
         </div>
-        <div class="col-8 full-centered border-l">
-          <div class="row full-width menu-tittle">
-            <div class="col-2 full-right">
-              <a [routerLink]="'/'" class="active">
-                Inicio
+      </div>
+      <div class="col-8 full-centered border-l">
+        <div class="row full-width menu-tittle ">
+          <div class="col full-centered no-display-600">
+            <a [routerLink]="'/'" class="active">
+              Inicio
+            </a>
+          </div>
+          <div class="col full-centered no-display-600">
+            <a [routerLink]="'/'" (click)="scrollTo('usDescription')" class="pointer-hand">
+              Nosotros
+            </a>
+          </div>
+          <div class="col full-centered no-display-600">
+            <a [routerLink]="'/catalogue'" class="">
+              Productos
+            </a>
+          </div>
+          <div class="col full-centered no-display-600">
+            <a [routerLink]="'/'" (click)="scrollTo('servicesDescription')" class="pointer-hand">
+              Servicios
+            </a>
+          </div>
+          <div class="col full-centered no-display-600">
+            <a [routerLink]="'/contact'" class="">
+              Contacto
+            </a>
+          </div>
+
+          <div class="nav-item full-right full-centered no-padding right-side-mobile" ngbDropdown>
+            <a ngbDropdownToggle href="javascript:void(0)"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars no-margin " style="font-size: xx-large;"></i>
+            </a>
+            <div class="dropdown-menu-right user-dd " ngbDropdownMenu
+              style="box-shadow: 4px 5px 7px -2px rgb(0 0 0 / 50%);">
+              <a class="dropdown-item max-btn-animate full-right white-color pa-20" routerLink="/">
+                <h3>
+                  <strong>
+                    Inicio
+                  </strong>
+                </h3>
               </a>
-            </div>
-            <div class="col-2 full-right">
-              <a [routerLink]="'/'" (click)="scrollTo('usDescription')" class="pointer-hand">
-                Nosotros
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item max-btn-animate full-right white-color pa-20" [routerLink]="'/'" (click)="scrollTo('usDescription')">
+                <h3>
+                  <strong>
+                    Nosotros
+                  </strong>
+                </h3>
               </a>
-            </div>
-            <div class="col-2 full-right">
-              <a [routerLink]="'/catalogue'" class="">
-                Productos
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item max-btn-animate full-right white-color pa-20" [routerLink]="'/catalogue'">
+                <h3>
+                  <strong>
+                    Productos
+                  </strong>
+                </h3>
               </a>
-            </div>
-            <div class="col-2 full-right">
-              <a [routerLink]="'/'" (click)="scrollTo('servicesDescription')" class="pointer-hand">
-                Servicios
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item max-btn-animate full-right white-color pa-20" [routerLink]="'/'" (click)="scrollTo('servicesDescription')">
+                <h3>
+                  <strong>
+                    Servicios
+                  </strong>
+                </h3>
               </a>
-            </div>
-            <div class="col-2 full-right">
-              <a [routerLink]="'/contact'" class="">
-                Contacto
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item max-btn-animate full-right white-color pa-20" [routerLink]="'/contact'" >
+                <h3>
+                  <strong>
+                    Contacto
+                  </strong>
+                </h3>
               </a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div>

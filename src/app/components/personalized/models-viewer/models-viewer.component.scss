@@ -1,21 +1,6 @@
 .carousel-inner{
   height: 100%;
 }
-.zoom-label{
-  height: 10%;
-  font-size: 3em;
-  color: #949494;
-}
-.giro-label{
-  height: 10%;
-  font-size: 2em;
-  color: #949494;
-}
-.zoom-label2{
-  height: 10%;
-  font-size: 2em;
-  color: #949494;
-}
 /* Special styling for WebKit/Blink */input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
@@ -47,4 +32,135 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #0067AA;
 }
-//Para otros navegadores
+.giro-label{
+  height: 10%;
+  color: #949494;
+}
+.zoom-label{
+  height: 10%;
+  color: #949494;
+}
+.zoom-label2{
+  height: 10%;
+  color: #949494;
+}
+
+
+.select-titles {
+  font-size: 6.2vw;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  width: 100%;
+}
+.input-zoom-bar{
+  transform: rotate(-90deg);
+}
+.col-square {
+  margin: 6px;
+  background: #E4EFF9;
+  border-radius: 17px;
+  width: 70%;
+  height: 90px;
+
+  img {
+   padding: 10px;
+   width: 87px;
+   height: 55px;
+  }
+
+  .gas-image {
+    width: 87px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .mobile-design{
+    .gawi-logo{
+      width: 23%;
+    }
+    h3{
+      font-family: 'Roboto';
+      font-size: 6.2vw;
+      strong{
+        vertical-align: sub;
+      }
+    }
+    p{
+      padding-top: 10px;
+      font-family: 'Roboto';
+      font-size: 4.2vw;
+      color: #515151;
+    }
+    input[type=range] {
+      width: 80px;
+    }
+    .input-zoom-giro{
+      width: 95% !important;
+    }
+    /* .full-giro{
+      position: absolute;
+    } */
+  }
+}
+@media  screen  and ( min-width: 600px ) {
+  .no-display-600{
+    display: none !important;
+  }
+}
+@media (min-width: 602px) and (max-width: 1055px) {
+  .giro-label{
+    font-size: 1.5em;
+  }
+  .zoom-label{
+    font-size: 2em;
+  }
+  .zoom-label2{
+    font-size: 1em;
+  }
+  .input-zoom-bar{
+    min-width: 100px;
+    width: 90% !important;
+  }
+  .input-zoom-giro{
+    width: 95% !important;
+  }
+}
+@media (min-width: 602px) and (max-width: 720px) {
+  model-viewer{
+    height : 220px;
+  }
+}
+@media (min-width: 720px) and (max-width: 880px) {
+  model-viewer{
+    height : 300px;
+  }
+}
+@media (min-width: 880px) and (max-width: 1055px) {
+  model-viewer{
+    height : 360px;
+  }
+}
+
+@media  screen  and ( min-width: 1055px ) {
+  model-viewer{
+    height : 350px;
+  }
+  .giro-label{
+    font-size: 1.8em;
+  }
+  .zoom-label{
+    font-size: 2.5em;
+  }
+  .zoom-label2{
+    font-size: 1.8em;
+  }
+  .input-zoom-giro{
+    width: 100% !important;
+  }
+  .input-zoom-bar{
+    transform: rotate(-90deg);
+    min-width: 190px;
+  }
+}

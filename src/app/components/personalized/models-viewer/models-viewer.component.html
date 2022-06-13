@@ -1,43 +1,86 @@
-<div class="row full-width full-height">
-  <div class="col-10">
-    <div class="row full-width full-height">
+<div class="row no-margin full-width full-height mobile-design pa-t-20">
+  <div class="col-12 no-padding">
+    <div class="row full-width no-margin">
       <!-- <ngb-carousel [interval]="1000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)" class="full-height"> -->
       <ngb-carousel #carousel (slide)="onSlide($event)" [interval]="100000" [pauseOnHover]="true" [pauseOnFocus]="true"
-        [wrap]="true" class="full-height">
+        [wrap]="true" class="full-height no-padding">
         <ng-template *ngFor="let model of filesDataConfig; let i = index;" ngbSlide [id]="''+i"
           class="col-12 full-height full-centered">
-          <model-viewer style="height: 300px;" class="full-width" camera-controls
-            [attr.camera-orbit]="model.camera_orbit" [attr.src]="model.src" alt="A 3D model of an astronaut"
-            data-js-focus-visible="" ar-status="not-presenting">
-          </model-viewer>
+          <div class="row full-width no-margin">
+            <div class="col-12 full-centered no-display-600">
+              <img class="gawi-logo pa-r-10" src="/assets/images/pages/landing/gawi_logo.png" />
+              <h3 class="no-margin black-color">
+                <strong>{{model.title}}</strong>
+              </h3>
+            </div>
+            <div class="col-12 no-display-600">
+              <p>
+                {{model.description}}
+              </p>
+            </div>
+            <div class="col-11">
+              <model-viewer class="full-width" camera-controls
+                [attr.camera-orbit]="model.camera_orbit" [attr.src]="model.src" alt="A 3D model of an astronaut"
+                data-js-focus-visible="" ar-status="not-presenting">
+              </model-viewer>
+            </div>
+            <div class="col-1 full-centered">
+              <div class="full-centered row full-height">
+                <div class="col-12 full-centered zoom-label">
+                  02
+                </div>
+                <div class="col-12">
+                  <input class="input-zoom-bar" (ngModelChange)="zoomGiroChange()" type="range" [min]="filesDataConfig[actualSlide].min"
+                    [max]="filesDataConfig[actualSlide].max" [(ngModel)]="filesDataConfig[actualSlide].actualZoom" step="1">
+                </div>
+                <div class="col-12 full-centered zoom-label2">
+                  01
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 full-giro">
+              <div class="row no-margin full-width">
+                <div class="col-1 full-centered giro-label">
+                  0<sup>o</sup>
+                </div>
+                <div class="col-9">
+                  <input class="input-zoom-giro" (ngModelChange)="zoomGiroChange()" type="range" [min]="0" [max]="360"
+                    [(ngModel)]="filesDataConfig[actualSlide].giro" step="1">
+                </div>
+                <div class="col-1 full-centered giro-label">
+                  360<sup>o</sup>
+                </div>
+              </div>
+            </div>
+          </div>
         </ng-template>
       </ngb-carousel>
     </div>
-    <div class="row full-width">
-      <div class="col-1 full-centered giro-label">
-        0<sup>o</sup>
-      </div>
-      <div class="col-10">
-        <input (ngModelChange)="zoomGiroChange()" type="range" [min]="0" [max]="360"
-          [(ngModel)]="filesDataConfig[actualSlide].giro" step="1" style="min-width: 200px;">
-      </div>
-      <div class="col-1 full-centered giro-label">
-        360<sup>o</sup>
-      </div>
-    </div>
-  </div>
-  <div class="col-1 full-centered">
-    <div class="full-centered row full-height">
-      <div class="col-12 full-centered zoom-label">
-        02
+    <div class="row no-display-600">
+      <div class="col-12 ff-roboto">
+        <label class="select-titles no-margin">
+          Selecciona el producto:
+        </label>
       </div>
       <div class="col-12">
-        <input (ngModelChange)="zoomGiroChange()" type="range" [min]="filesDataConfig[actualSlide].min"
-          [max]="filesDataConfig[actualSlide].max" [(ngModel)]="filesDataConfig[actualSlide].actualZoom" step="1"
-          style="transform: rotate(-90deg);min-width: 200px;">
-      </div>
-      <div class="col-12 full-centered zoom-label2">
-        01
+        <div class="row pa-0-10">
+          <!-- <div class="col-4 full-centered no-padding">
+            <div class="col-square full-centered">
+              <img src="/assets/images/pages/landing/micro-btn.png" />
+            </div>
+          </div> -->
+          <div class="col-6 full-centered no-padding">
+            <div class="col-square full-centered">
+              <img class="gas-image" src="/assets/images/pages/landing/meter_gas_btn.png" />
+            </div>
+          </div>
+          <div class="col-6 full-centered no-padding">
+            <div class="col-square full-centered">
+              <img src="/assets/images/pages/landing/meter_water_btn.png" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
