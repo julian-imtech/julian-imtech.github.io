@@ -26,7 +26,7 @@
   color: white;
 }
 
-@media (min-width: 1590px) and (max-width: 1920px) /* 1920 x 1080 */ {
+@media screen and ( min-width: 1590px ) {
   .our-services-figure {
     width: 45%;
   }
