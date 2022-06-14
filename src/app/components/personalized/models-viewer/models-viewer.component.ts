@@ -20,6 +20,8 @@ export class ModelsViewerComponent implements OnInit {
     actualZoom : number,
     originalZoom : number,
     camera_orbit : string,
+    title : string,
+    description : string,
     src : string,
   }[] = [{
     min : 0,
@@ -28,6 +30,8 @@ export class ModelsViewerComponent implements OnInit {
     actualZoom : 0,
     originalZoom : 250,
     camera_orbit : '0deg 0deg '+250+'m',
+    title : 'Medidor de agua',
+    description : 'En IMTech contamos con el unico medidor de agua ultrasónico que existe, la más alta tecnología para tu hogar',
     src : '/assets/images/pages/landing/ultrasonic_model.glb',
   },{
     min : 0,
@@ -36,6 +40,8 @@ export class ModelsViewerComponent implements OnInit {
     giro : 90,
     originalZoom : 150,
     camera_orbit : '90deg 0deg '+150+'m',
+    title : 'Medidor de gas',
+    description : 'Nuestro medidor de gas te facilitara tu dia, la más alta tecnología para tu hogar',
     src : '/assets/images/pages/landing/gas_model.glb',
   },];
 

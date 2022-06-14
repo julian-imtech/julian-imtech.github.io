@@ -57,6 +57,36 @@
   }
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .bg-port{
+    img{
+      width: 125%;
+    }
+    h1{
+      font-size: xx-large;
+      color: #000;
+    }
+  }
+  .title-catalogue{
+    font-size: 3em !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bg-port{
+    .col-sm-6{
+      position: absolute;
+      top: 180px;
+    }
+    img{
+      width: 66%;
+    }
+    h1{
+      font-size: 6vw;
+      color: #000;
+    }
+  }
+}
+
 @media (min-width: 0px) and (max-width: 768px) {
   .product-padding {
     padding-top: 10px;

@@ -10,7 +10,8 @@ import { DataSessionService } from '../../../../services/dataSession/data-sessio
 
 @Component({
   selector: 'app-navigation-admin',
-  templateUrl: './navigation-admin.component.html'
+  templateUrl: './navigation-admin.component.html',
+  styleUrls: ['./navigation-admin.component.scss']
 })
 export class NavigationAdminComponent implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();

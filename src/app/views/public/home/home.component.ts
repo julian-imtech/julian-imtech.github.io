@@ -22,27 +22,27 @@ export class HomeComponent implements OnInit {
     freeDrag : true,
     dots: false,
     startPosition : 1,
-    margin: 35,
     /* responsiveRefreshRate : 15, */
     navSpeed: 700,
     navText: ['', ''],
-    items : 4.5,
+    //items : 4.5,
     responsive: {
-      940: {
-        items: 4.5
+      0: {
+        items: 2,
+        margin: 5,
+      },
+      602: {
+        items: 2.5,
+        margin: 10,
+      },
+      1025: {
+        items: 3,
+        margin: 20,
+      },
+      1367: {
+        items: 4.5,
+        margin: 35,
       }
-      /* 0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      } */
     },
     nav: false
   }
@@ -53,21 +53,20 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   async ngOnInit() {
-
     this.initialWidthDescription = -1;
     let p: HTMLElement | null = document.getElementById("description-div");
 
     if(p) {
-      console.log("OFFSET:", p.offsetWidth)
-      await this.utilitiesService.sleep(100);
+      console.log("P:", p.offsetWidth);
+      await this.utilitiesService.sleep(1000);
       this.initialWidthDescription = p.offsetWidth;
     }
   }
 
   changeUsData( index : number ){
-    if(index == this.actualDescription){
+    if (index == this.actualDescription) {
       this.actualDescription = -1;
-    }else{
+    } else {
       this.actualDescription = index;
     }
   }

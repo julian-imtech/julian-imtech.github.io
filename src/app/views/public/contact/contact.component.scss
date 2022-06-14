@@ -32,3 +32,30 @@ a:hover{
   border-radius: 100px;
   /* position: absolute; */
 }
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .ff-roboto{
+    font-size: 1.2em;
+    line-height: 20px !important;
+    padding-left: 10px;
+  }
+  img{
+    padding : 10px;
+    width: 140%;
+  }
+  h1{
+    font-size: 3em !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  img{
+    width: 100%;
+    padding : 10px;
+    min-width: 80px;
+  }
+  /* .ff-roboto{
+    font-size: 3em;
+    line-height: 20px !important;
+    padding-left: 10px;
+  } */
+}
