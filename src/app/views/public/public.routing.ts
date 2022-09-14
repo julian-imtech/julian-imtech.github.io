@@ -16,11 +16,11 @@ export const PublicRoutes: Routes = [
         component: HomeComponent,
         data: {
           pageTitle : 'Información general de la empresa', // Only for dashboards
-          title : 'IM TECH',
+          title : 'IMTECH',
           description:'',
           keywords : '',
           ogUrl: 'https://ingmulti.com/#/',
-          ogTitle: 'IM TECH',
+          ogTitle: 'IMTECH',
           ogDescription : '',
           ogImage : 'https://ingmulti.com/#/assets/minified/images/meta.png',
           urls: [
@@ -34,11 +34,11 @@ export const PublicRoutes: Routes = [
         component: CatalogueComponent,
         data: {
           pageTitle : 'Catalogo de productos', // Only for dashboards
-          title : 'IM TECH | Catalogo de productos',
+          title : 'IMTECH | Catalogo de productos',
           description:'',
           keywords : '',
           ogUrl: 'https://ingmulti.com/#/',
-          ogTitle: 'IM TECH',
+          ogTitle: 'IMTECH',
           ogDescription : '',
           ogImage : 'https://ingmulti.com/#/assets/minified/images/meta.png',
           urls: [
@@ -51,11 +51,11 @@ export const PublicRoutes: Routes = [
         component: ContactComponent,
         data: {
           pageTitle : 'Catalogo de productos', // Only for dashboards
-          title : 'IM TECH | Catalogo de productos',
+          title : 'IMTECH | Catalogo de productos',
           description:'',
           keywords : '',
           ogUrl: 'https://ingmulti.com/#/',
-          ogTitle: 'IM TECH',
+          ogTitle: 'IMTECH',
           ogDescription : '',
           ogImage : 'https://ingmulti.com/#/assets/minified/images/meta.png',
           urls: [
@@ -69,11 +69,11 @@ export const PublicRoutes: Routes = [
         component: LoginComponent,
         data: {
           pageTitle : 'Información general de la empresa', // Only for dashboards
-          title : 'IM TECH',
+          title : 'IMTECH',
           description:'',
           keywords : '',
           ogUrl: 'https://ingmulti.com/#/',
-          ogTitle: 'IM TECH',
+          ogTitle: 'IMTECH',
           ogDescription : '',
           ogImage : 'https://ingmulti.com/#/assets/minified/images/meta.png',
           urls: [

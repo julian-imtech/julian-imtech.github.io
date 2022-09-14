@@ -32,11 +32,11 @@ const routes: Routes = [
         component: CatalogueComponent,
         data: {
           pageTitle : 'Catalogo de productos', // Only for dashboards
-          title : 'IM TECH | Catalogo de productos',
+          title : 'IMTECH | Catalogo de productos',
           description:'',
           keywords : '',
           ogUrl: 'https://ingmulti.com/#/',
-          ogTitle: 'IM TECH',
+          ogTitle: 'IMTECH',
           ogDescription : '',
           ogImage : 'https://ingmulti.com/#/assets/minified/images/meta.png',
           urls: [
