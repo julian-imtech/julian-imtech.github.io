@@ -31,7 +31,7 @@ export class ModelsViewerComponent implements OnInit {
     originalZoom : 250,
     camera_orbit : '0deg 0deg '+250+'m',
     title : 'Medidor de agua',
-    description : 'En IMTech contamos con el unico medidor de agua ultrasónico que existe, la más alta tecnología para tu hogar',
+    description : 'En IMTech contamos con el único medidor de agua ultrasónico que existe, la más alta tecnología para tu hogar',
     src : '/assets/images/pages/landing/ultrasonic_model.glb',
   },{
     min : 0,
