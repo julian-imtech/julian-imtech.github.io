@@ -41,6 +41,7 @@
     "@types/mapbox-gl": "^2.6.3",
     "@types/node": "^12.11.1",
     "@types/three": "^0.139.0",
+    "angular-cli-ghpages": "^1.0.7",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
